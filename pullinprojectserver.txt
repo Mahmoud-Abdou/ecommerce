@@ -1,0 +1,14 @@
+cd /opt/lampp/htdocs/laravel_application
+git pull
+
+cd /opt/lampp/htdocs/menus
+git pull
+
+cd /opt/lampp/htdocs/electronic
+git pull
+
+cd /opt/lampp/htdocs/sweet
+git pull
+
+cd /opt/lampp/htdocs/hekaya
+git pull

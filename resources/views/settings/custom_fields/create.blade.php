@@ -1,0 +1,134 @@
+@extends('layouts.settings.default')
+@push('css_lib')
+<!-- iCheck -->
+<link rel="stylesheet" href="{{asset('plugins/iCheck/flat/blue.css')}}">
+<!-- select2 -->
+<link rel="stylesheet" href="{{asset('plugins/select2/select2.min.css')}}">
+@endpush
+
+
+
+@section('settings_title',trans('lang.custom_field_create'))
+@section('settings_content')
+  @include('flash::message')
+  
+  @if (  __('lang.language') == "ar")
+    <style>
+    .main-sidebar, .main-sidebar{
+    right:0 !important;
+    left:unset !important;
+}
+
+.content-wrapper, .main-footer
+{
+    direction: rtl !important;
+    margin-left:0 !important;
+    margin-right:270px !important;
+}
+ /* .main-header{
+    margin-left: 0;
+    flex-direction: row-reverse;
+} */
+
+/* .navbar-expand > .navbar-nav{
+    margin-left:auto;
+} */
+
+.main-header{
+    margin-left:0 !important;
+    margin-right:270px !important;
+    flex-direction: row-reverse !important;
+}
+.navbar-expand .navbar-nav{
+    margin-left:0 !important;
+}
+.navbar-expand .navbar-nav:first-child
+{margin-left: auto !important}
+
+.navbar-expand .navbar-nav .dropdown-menu{
+    left:0 !important;
+}
+
+.sidebar-collapse .content-wrapper, .sidebar-collapse
+.main-footer, .sidebar-collapse
+.main-header {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+.sidebar-mini.sidebar-collapse .content-wrapper, .sidebar-mini.sidebar-collapse .main-footer, .sidebar-mini.sidebar-collapse .main-header{
+    margin-left: 0 !important;
+    margin-right: 4.6rem !important;
+    
+    
+}
+.content-header{
+    direction: ltr !important;;
+}
+.text-right {
+    text-align: left !important;
+}
+.dropzone .dz-message span:before{
+  left: -155px;
+}
+.slimScrollBar{
+    background:black !important;
+    cursor:grap;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block !important;
+    padding-left: 0.5rem !important;
+    color: #6c757d !important;
+   
+    content: "/" !important;
+}
+
+.content-header .breadcrumb{
+    direction: rtl !important;
+}
+.content-header {
+    direction: rtl !important;
+}
+
+.content-header {
+    text-align: start;
+}
+
+</style>
+    @endif
+  <div class="card">
+    <div class="card-header">
+      <ul class="nav nav-tabs align-items-end card-header-tabs w-100">
+        <li class="nav-item">
+          <a class="nav-link" href="{!! route('customFields.index') !!}"><i class="fa fa-list mr-2"></i>{{trans('lang.custom_field_table')}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="{!! url()->current() !!}"><i class="fa fa-plus mr-2"></i>{{trans('lang.custom_field_create')}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      {!! Form::open(['route' => 'customFields.store']) !!}
+      <div class="row">
+        @include('settings.custom_fields.fields')
+      </div>
+      {!! Form::close() !!}
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+@include('layouts.media_modal')
+@endsection
+@push('scripts_lib')
+<!-- iCheck -->
+<script src="{{asset('plugins/iCheck/icheck.min.js')}}"></script>
+<!-- select2 -->
+<script src="{{asset('plugins/select2/select2.min.js')}}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
+{{--dropzone--}}
+<script src="{{asset('plugins/dropzone/dropzone.js')}}"></script>
+<script type="text/javascript">
+    Dropzone.autoDiscover = false;
+    var dropzoneFields = [];
+</script>
+@endpush

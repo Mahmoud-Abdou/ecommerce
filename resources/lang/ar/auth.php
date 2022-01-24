@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'agree' => 'أنا أوافق على الشروط',
+    'already_member' => 'عضو بالفعل',
+    'email' => ' بريد الكتروني',
+    'failed' => 'فشل',
+    'forgot_password' => 'هل نسيت كلمة المرور',
+    'login' => 'Login',
+    'login_facebook' => 'تسجيل الدخول الفيسبوك',
+    'login_google' => 'تسجيل الدخول جوجل',
+    'login_title' => 'تسجيل الدخول',
+    'login_twitter' => 'تسجيل الدخول باستخدام تويتر',
+    'logout' => 'تسجيل الخروج',
+    'name' => 'الاسم الكامل',
+    'password' => 'كلمه السر',
+    'password_confirmation' => 'تأكيد كلمة المرور',
+    'register' => 'تسجيل',
+    'register_new_member' => 'تسجيل عضوية جديدة',
+    'remember_me' => 'تذكرنى',
+    'remember_password' => 'تذكر كلمة المرور',
+    'reset_password' => 'إعادة تعيين كلمة المرور',
+    'reset_password_title' => 'أدخل كلمة المرور الجديدة',
+    'reset_title' => 'البريد الإلكتروني لإعادة تعيين كلمة المرور',
+    'send_password' => 'إرسال رابط إعادة تعيين كلمة السر',
+    'throttle' => 'محاولات تسجيل دخول كثيرة. يرجى المحاولة مرة أخرى بعد: ثواني.',
+];
